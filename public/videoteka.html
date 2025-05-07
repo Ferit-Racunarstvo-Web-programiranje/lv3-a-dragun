@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Videoteka">
+      <meta name="keywords" content="Film, TV, Animacija, Drama, Komedija">
+      <meta name="author" content="Ante Dragun">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style_videoteka.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <title>Videoteka</title>
+</head>
+<body>
+    <header>
+        <nav aria-labelledby="primarna-navigacija">
+         <div class="dropdown">
+             <div class="menu"></div>
+             <div class="menu"></div>
+             <div class="menu"></div>
+                 <div class="dropdown-content">				
+                     <a href="#">Pocetna</a>
+                     <a href="slike">Galerija slika</a>
+                     <a href="grafikoni.html">Grafikoni</a>
+                 </div>
+         </div>
+     </nav>
+ </header>
+    <div class="kosarica-container">
+        <button class="dropbtn">Kosarica</button>
+        <div class="dropdown-kosarica">
+            <ul id="lista-kosarice">
+            </ul>
+            <button id="potvrdi-kosaricu">Potvrdi odabir</button>
+        </div>  
+    </div>
+    <br><br>
+    <h2>Filteri</h2>
+    <div id="filteri">
+        <select id="filter-genre">
+        </select>
+        <input type="number" id="filter-year" placeholder="Godina od">
+        <div id="filter-country"></div>
+        <input type="range" id="filter-length" min="60" max="180" step="5" value="60">
+        <span id="length-value">60</span>
+        <button id="primijeni-filtere">Filtriraj</button>
+    </div>
+    <h2>Popis Filmova</h2>
+    <div class="table-container">
+		<table class="movies">
+            <thead>
+                <tr>
+                    <th>Naslov</th>
+                    <th><a id="table-years" href="#" onclick="sortByYears()">Godina</a></th>
+                    <th>Žanr</th>
+                    <th>Redatelji</th>
+                    <th>Trajanje</th>
+                    <th>Države</th>
+                    <th>Ocjena</th>
+                    <th>Posudi</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+		</table>
+    </div>
+
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

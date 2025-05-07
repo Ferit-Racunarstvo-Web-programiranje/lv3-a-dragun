@@ -1,0 +1,44 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Galerija slika">
+	  <meta name="author" content="Ante Dragun">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/style_slike.css">
+	<title>Galerija slika</title>
+</head>
+<body>
+	<header>
+		   <nav aria-labelledby="primarna-navigacija">
+			<div class="dropdown">
+				<div class="menu"></div>
+					<div class="menu"></div>
+					<div class="menu"></div>
+					<div class="dropdown-content">				
+						<a href="index.html">Pocetna</a>
+						<a href="#">Galerija slika</a>
+						<a href="grafikoni.html">Grafikoni</a>
+					</div>
+			</div>
+		</nav>
+	</header>
+	<h1 class="title">Galerija slika</h1>
+	<div class="img-gallery-magnific">
+		<% images.forEach((image, index) => { %>
+		  <figure class="galerija_slika">
+			<a class="image-popup-vertical-fit" href="#img<%= index %>" title="<%= image.title %>">
+			  <img src="<%= image.url %>" alt="<%= image.title %>" loading="lazy">
+			</a>
+			<div class="overlay">
+			  <div class="text"><%= image.title %></div>
+			</div>
+		  </figure>
+	  
+		  <div class="lightbox" id="img<%= index %>">
+			<a href="#!" class="close">x</a>
+			<img src="<%= image.url %>" alt="<%= image.title %>">
+		  </div>
+		<% }); %>
+	  </div>
+	  
+
+</body>
